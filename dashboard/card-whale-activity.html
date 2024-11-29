@@ -1,32 +1,223 @@
-<h2>Whale Activity <span id="whale-alert-count" class="alert-count">0</span></h2>
-<div class="whale-filters">
-    <button class="filter-btn active">All</button>
-    <button class="filter-btn">Buys</button>
-    <button class="filter-btn">Sells</button>
-    <button class="filter-btn">Transfers</button>
-</div>
-<div class="whale-list" id="whale-movements">
-    <div class="whale-header">
-        <div>Wallet</div>
-        <div>Action</div>
-        <div>Amount</div>
-        <div>Impact</div>
+<h2 class="card-title">Whale Activity <span id="whale-alert-count" class="alert-count">8</span></h2>
+<div class="whale-container">
+    <div class="whale-filters">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Buys</button>
+        <button class="filter-btn">Sells</button>
+        <button class="filter-btn">Transfers</button>
     </div>
-    <div class="whale-scrollable" id="whale-feed">
-        <!-- Dynamic whale movements will appear here -->
-    </div>
-</div>
-<div class="whale-metrics">
-    <div class="metric-box">
-        Buy Pressure: <span id="whale-buy-pressure">0%</span>
-        <div class="pressure-bar">
-            <div class="pressure-fill" id="buy-pressure-fill"></div>
+    <div class="whale-list" id="whale-movements">
+        <div class="whale-header">
+            <div class="col wallet">Wallet</div>
+            <div class="col action">Action</div>
+            <div class="col amount">Amount</div>
+            <div class="col impact">Impact</div>
+        </div>
+        <div class="whale-scrollable" id="whale-feed">
+            <div class="whale-item buy">
+                <div class="col wallet">0x7a2...3f9b</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">1,250 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0x9c4...8e2d</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">890 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item sell">
+                <div class="col wallet">0x3b5...7a1c</div>
+                <div class="col action">Sell</div>
+                <div class="col amount">2,100 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x4d8...2e5f</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">750 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0x6f1...9c3a</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">1,500 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
         </div>
     </div>
-    <div class="metric-box">
-        Sell Pressure: <span id="whale-sell-pressure">0%</span>
-        <div class="pressure-bar">
-            <div class="pressure-fill" id="sell-pressure-fill"></div>
+    <div class="whale-metrics">
+        <div class="metric-box">
+            Buy Pressure: <span id="whale-buy-pressure">65%</span>
+            <div class="pressure-bar">
+                <div class="pressure-fill" id="buy-pressure-fill" style="width: 65%"></div>
+            </div>
+        </div>
+        <div class="metric-box">
+            Sell Pressure: <span id="whale-sell-pressure">35%</span>
+            <div class="pressure-bar">
+                <div class="pressure-fill" id="sell-pressure-fill" style="width: 35%"></div>
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+.whale-container {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.whale-filters {
+    margin-bottom: 0.3rem;
+}
+
+.filter-btn {
+    font-size: 0.65rem;
+    padding: 1px 6px;
+    margin-right: 3px;
+}
+
+.whale-header, .whale-item {
+    display: grid;
+    grid-template-columns: 30% 20% 25% 25%;
+    gap: 4px;
+    padding: 4px 6px;
+    align-items: center;
+}
+
+.whale-header {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #00ff00;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.whale-list {
+    flex: 1;
+    overflow: hidden;
+}
+
+.whale-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.7rem;
+}
+
+.col {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col.wallet {
+    color: #00ff00;
+    opacity: 1;
+}
+
+.col.action {
+    text-align: center;
+}
+
+.col.amount {
+    text-align: right;
+    padding-right: 8px;
+}
+
+.col.impact {
+    text-align: center;
+}
+
+.whale-item.buy {
+    background: rgba(0, 255, 0, 0.02);
+}
+
+.whale-item.buy .action {
+    color: #00ff00;
+}
+
+.whale-item.sell {
+    background: rgba(255, 0, 0, 0.02);
+}
+
+.whale-item.sell .action {
+    color: #ff0000;
+}
+
+.whale-item.transfer {
+    background: rgba(0, 150, 255, 0.02);
+}
+
+.whale-item.transfer .action {
+    color: #ffff00;
+}
+
+.impact {
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 0.6rem;
+    display: inline-block;
+    min-width: 45px;
+}
+
+.impact.low {
+    background: rgba(255, 255, 0, 0.1);
+    color: #ffff00;
+}
+
+.impact.medium {
+    background: rgba(255, 165, 0, 0.1);
+    color: #ffff00;
+}
+
+.impact.high {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+}
+
+.impact.critical {
+    background: rgba(255, 0, 0, 0.15);
+    color: #ff0000;
+    font-weight: 500;
+}
+
+.whale-scrollable {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.whale-metrics {
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+}
+
+.metric-box {
+    margin-bottom: 0.2rem;
+}
+
+.pressure-bar {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 2px;
+}
+
+.pressure-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+#buy-pressure-fill {
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+}
+
+#sell-pressure-fill {
+    background: linear-gradient(90deg, #FF5722, #F44336);
+}
+</style>

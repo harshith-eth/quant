@@ -1,0 +1,36 @@
+<h2>Risk Management <span id="risk-level-indicator">LOW</span></h2>
+<div class="risk-metrics">
+    <div class="risk-section">
+        <div class="section-title">Position Limits</div>
+        <div class="metric-box">Max Size: $<span id="max-position-size">5.00</span></div>
+        <div class="metric-box">Max Exposure: <span id="max-exposure">50%</span></div>
+    </div>
+    <div class="risk-section">
+        <div class="section-title">Stop Levels</div>
+        <div class="metric-box">Hard Stop: <span id="hard-stop">-30%</span></div>
+        <div class="metric-box">Trailing: <span id="trailing-stop">15%</span></div>
+    </div>
+</div>
+<div class="risk-alerts" id="risk-alerts">
+    <!-- Dynamic risk alerts will appear here -->
+</div>
+<div class="exit-strategy">
+    <div class="strategy-title">AUTO EXIT STRATEGY</div>
+    <div class="exit-levels">
+        <div class="exit-level">
+            <span class="level-name">2x</span>
+            <span class="level-action">Sell 40%</span>
+            <span class="level-status" id="exit-2x">Waiting</span>
+        </div>
+        <div class="exit-level">
+            <span class="level-name">5x</span>
+            <span class="level-action">Sell 40%</span>
+            <span class="level-status" id="exit-5x">Waiting</span>
+        </div>
+        <div class="exit-level">
+            <span class="level-name">10x</span>
+            <span class="level-action">Sell 20%</span>
+            <span class="level-status" id="exit-10x">Waiting</span>
+        </div>
+    </div>
+</div>

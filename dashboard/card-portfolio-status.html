@@ -1,0 +1,51 @@
+<h2>Portfolio Status 
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <div class="goal-text">TARGET: $500</div>
+        <div class="header-progress">
+            <div class="header-progress-fill" style="width: 11.6%"></div>
+        </div>
+    </div>
+</h2>
+
+<div class="scanner-metrics">
+    <div class="metric-group">
+        <div class="metric-title">Balance Overview</div>
+        <div class="metric-box">Initial: $25.00</div>
+        <div class="metric-box">Current: $<span id="current-balance">25.00</span></div>
+        <div class="metric-box">Target: $<span class="profit-target">500.00</span></div>
+        <div class="metric-box">Needed: <span id="gain-needed">1,900%</span></div>
+    </div>
+
+    <div class="metric-group">
+        <div class="metric-title">Account Status</div>
+        <div class="metric-box">Available: $<span id="available-balance">25.00</span></div>
+        <div class="metric-box">Allocated: $<span id="allocated-balance">0.00</span></div>
+    </div>
+</div>
+
+<div class="scanner-metrics">
+    <div class="metric-group">
+        <div class="metric-title">Performance</div>
+        <div class="metric-box">24h P/L: <span id="daily-pl">0.00%</span></div>
+        <div class="metric-box">Total ROI: <span id="total-roi">0.00%</span></div>
+        <div class="metric-box">Win Rate: <span id="win-rate">0/0</span></div>
+        <div class="metric-box">Avg Profit: <span id="avg-profit">0.00%</span></div>
+    </div>
+
+    <div class="metric-group">
+        <div class="metric-title">Trade Records</div>
+        <div class="metric-box">Best Trade: <span id="best-trade">0.00%</span></div>
+        <div class="metric-box">Worst Trade: <span id="worst-trade">0.00%</span></div>
+        <div class="metric-box">Max Drawdown: <span id="max-drawdown">0.00%</span></div>
+        <div class="metric-box">Portfolio Heat: <span id="portfolio-heat">LOW</span></div>
+    </div>
+</div>
+
+<div class="alert-box">
+    <div class="criteria-title">Take Profit Targets:</div>
+    <div class="criteria-list">
+        <div class="criteria-item">TP1 (2x): <span class="tp-waiting">Waiting</span></div>
+        <div class="criteria-item">TP2 (5x): <span class="tp-waiting">Waiting</span></div>
+        <div class="criteria-item">TP3 (10x): <span class="tp-waiting">Waiting</span></div>
+    </div>
+</div>

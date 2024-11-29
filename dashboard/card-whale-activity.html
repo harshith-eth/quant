@@ -1,0 +1,32 @@
+<h2>Whale Activity <span id="whale-alert-count" class="alert-count">0</span></h2>
+<div class="whale-filters">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Buys</button>
+    <button class="filter-btn">Sells</button>
+    <button class="filter-btn">Transfers</button>
+</div>
+<div class="whale-list" id="whale-movements">
+    <div class="whale-header">
+        <div>Wallet</div>
+        <div>Action</div>
+        <div>Amount</div>
+        <div>Impact</div>
+    </div>
+    <div class="whale-scrollable" id="whale-feed">
+        <!-- Dynamic whale movements will appear here -->
+    </div>
+</div>
+<div class="whale-metrics">
+    <div class="metric-box">
+        Buy Pressure: <span id="whale-buy-pressure">0%</span>
+        <div class="pressure-bar">
+            <div class="pressure-fill" id="buy-pressure-fill"></div>
+        </div>
+    </div>
+    <div class="metric-box">
+        Sell Pressure: <span id="whale-sell-pressure">0%</span>
+        <div class="pressure-bar">
+            <div class="pressure-fill" id="sell-pressure-fill"></div>
+        </div>
+    </div>
+</div>

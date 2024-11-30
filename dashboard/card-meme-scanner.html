@@ -299,6 +299,34 @@
         margin-top: 15px;
         margin-bottom: 1vh;
     }
+
+    /* Market Heat Tag Styling */
+    .market-heat-tag {
+        display: inline-block;
+        padding: 1px 4px;
+        border-radius: 0;
+        font-family: 'Courier New', monospace;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.6rem;
+        min-width: 45px;
+        text-align: center;
+    }
+
+    .market-heat-tag.high {
+        background: rgba(255, 0, 0, 0.1);
+        color: #ff0000;
+    }
+
+    .market-heat-tag.medium {
+        background: rgba(255, 165, 0, 0.1);
+        color: #ffff00;
+    }
+
+    .market-heat-tag.low {
+        background: rgba(0, 255, 0, 0.1);
+        color: #00ff00;
+    }
 </style>
 
 <div id="meme-scanner" class="card">
@@ -315,7 +343,7 @@
                 <div class="metric-title">Market Stats</div>
                 <div class="metric-box">Avg MC: $<span id="avg-mc">154K</span></div>
                 <div class="metric-box">Avg Vol: $<span id="avg-volume">47K</span></div>
-                <div class="metric-box">Heat: <span id="market-heat" class="status-red">HIGH</span></div>
+                <div class="metric-box">Heat: <span id="market-heat" class="market-heat-tag high">HIGH</span></div>
             </div>
         </div>
 

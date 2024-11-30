@@ -250,13 +250,54 @@
     min-height: 24px;
 }
 
-.token-cell { grid-column: 1; font-size: 1.24vh; }
-.mc-cell { grid-column: 2; text-align: right; font-size: 1.24vh; }
-.entry-cell { grid-column: 3; text-align: right; font-size: 1.24vh; }
-.size-cell { grid-column: 4; text-align: right; font-size: 1.24vh; }
-.pl-cell { grid-column: 5; text-align: right; font-size: 1.24vh; }
-.time-cell { grid-column: 6; text-align: center; font-size: 1.24vh; }
-.action-cell { grid-column: 7; font-size: 1.24vh; }
+.token-cell { 
+    grid-column: 1; 
+    font-size: 1.24vh;
+    padding-left: 0;
+}
+.mc-cell { 
+    grid-column: 2; 
+    text-align: right; 
+    font-size: 1.24vh;
+    padding-right: 2px;
+}
+.entry-cell { 
+    grid-column: 3; 
+    text-align: right; 
+    font-size: 1.24vh;
+    padding-right: 2px;
+}
+.size-cell { 
+    grid-column: 4; 
+    text-align: right; 
+    font-size: 1.24vh;
+    padding-right: 2px;
+}
+.pl-cell { 
+    grid-column: 5; 
+    text-align: right; 
+    font-size: 1.24vh;
+    padding-right: 2px;
+}
+.time-cell { 
+    grid-column: 6; 
+    text-align: center; 
+    font-size: 1.24vh;
+}
+.action-cell { 
+    grid-column: 7; 
+    font-size: 1.24vh;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.trade-header .token-cell { padding-left: 0; }
+.trade-header .mc-cell { padding-right: 2px; }
+.trade-header .entry-cell { padding-right: 2px; }
+.trade-header .size-cell { padding-right: 2px; }
+.trade-header .pl-cell { padding-right: 2px; }
+.trade-header .time-cell { text-align: center; }
+.trade-header .action-cell { padding-left: 4px; }
 
 .token-name {
     display: block;

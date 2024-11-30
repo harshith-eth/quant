@@ -42,9 +42,101 @@
     .scanner-metrics,
     .token-feed,
     .opportunity-metrics,
-    .alert-box,
+    .alert-box {
+        margin-bottom: 1vh;
+    }
+
+    /* Token time styling */
+    .token-time {
+        color: #ffffff !important;
+    }
+
+    /* Feed headers styling */
+    .feed-header, .metric-title {
+        font-size: 1.3vh;
+        color: #00ff00;
+        margin-bottom: 0.5vh;
+        font-weight: normal;
+    }
+
+    /* Scrollable areas */
+    .scrollable-feed, .scrollable-list {
+        max-height: 12vh;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding-right: 1vh;
+    }
+
+    .scrollable-feed::-webkit-scrollbar, .scrollable-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Entry criteria styling */
+    .criteria-item {
+        color: #ff0000 !important;
+    }
+
+    /* Footer styling */
     .scanner-footer {
-        margin-bottom: 2vh;
+        margin-top: 1vh;
+        padding-bottom: 1.1vh !important;
+    }
+
+    .scan-stat {
+        color: #ffffff;
+        font-size: 1.3vh;
+    }
+
+    /* Update token entry styling */
+    .token-entry {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr 0.8fr 0.6fr 0.8fr 0.6fr 0.8fr;
+        gap: 8px;
+        padding: 4px 8px;
+        align-items: center;
+        border-bottom: 1px solid #001100;
+        font-size: 1.3vh;
+    }
+
+    .token-time { color: #00ff00; }
+    .token-name { color: #00ff00; }
+    .token-mc { color: #00ff00; }
+    .token-liq { color: #00cc00; font-size: 1.3vh; }
+    .token-ratio.positive { color: #00ff00; }
+    .token-ratio.negative { color: #ff0000; }
+    .token-holders { color: #00cc00; font-size: 1.3vh; }
+    .token-top-wallet { color: #00cc00; font-size: 1.3vh; }
+
+    /* Highlight dangerous values */
+    .token-top-wallet[data-value="high"] { color: #ff0000; }
+    .token-liq[data-value="low"] { color: #ff6600; }
+
+    /* Add styles for the subheader */
+    .feed-subheader {
+        display: grid;
+        grid-template-columns: 1fr 0.8fr 0.8fr 0.6fr 0.8fr 0.6fr 0.8fr;
+        gap: 8px;
+        padding: 4px 8px;
+        align-items: center;
+        border-bottom: 1px solid #003300;
+        color: #00aa00;
+        font-size: 1.2vh;
+        margin-bottom: 0.5vh;
+    }
+
+    .feed-header {
+        margin-bottom: 1vh;
+    }
+
+    /* Token Stats styling */
+    .metric-box {
+        font-size: 1.3vh;
+    }
+
+    /* Remove individual size overrides */
+    .token-liq, .token-holders, .token-top-wallet {
+        color: #00cc00;
     }
 </style>
 
@@ -68,24 +160,60 @@
 
         <div class="token-feed">
             <div class="feed-header">LIVE TOKEN FEED</div>
+            <div class="feed-subheader">
+                <div class="token-name">Token</div>
+                <div class="token-mc">MC</div>
+                <div class="token-liq">Liq</div>
+                <div class="token-ratio">B/S</div>
+                <div class="token-holders">Holders</div>
+                <div class="token-time">Age</div>
+                <div class="token-top-wallet">Top</div>
+            </div>
             <div class="scrollable-feed" id="token-feed">
                 <div class="token-entry new-token">
-                    <div class="token-time">12:35:41</div>
                     <div class="token-name">$PEPE2</div>
                     <div class="token-mc">$147K</div>
+                    <div class="token-liq">$12K</div>
                     <div class="token-ratio positive">5.2:1</div>
+                    <div class="token-holders">124</div>
+                    <div class="token-time">2m</div>
+                    <div class="token-top-wallet">3.2%</div>
                 </div>
                 <div class="token-entry">
-                    <div class="token-time">12:34:15</div>
                     <div class="token-name">$WOJAK</div>
                     <div class="token-mc">$198K</div>
+                    <div class="token-liq">$23K</div>
                     <div class="token-ratio positive">4.1:1</div>
+                    <div class="token-holders">89</div>
+                    <div class="token-time">4m</div>
+                    <div class="token-top-wallet">4.8%</div>
                 </div>
                 <div class="token-entry">
-                    <div class="token-time">12:33:02</div>
                     <div class="token-name">$CHAD</div>
                     <div class="token-mc">$89K</div>
+                    <div class="token-liq">$8K</div>
                     <div class="token-ratio negative">1.2:1</div>
+                    <div class="token-holders">45</div>
+                    <div class="token-time">6m</div>
+                    <div class="token-top-wallet">8.9%</div>
+                </div>
+                <div class="token-entry">
+                    <div class="token-name">$DOGE3</div>
+                    <div class="token-mc">$167K</div>
+                    <div class="token-liq">$18K</div>
+                    <div class="token-ratio positive">3.8:1</div>
+                    <div class="token-holders">156</div>
+                    <div class="token-time">8m</div>
+                    <div class="token-top-wallet">2.9%</div>
+                </div>
+                <div class="token-entry">
+                    <div class="token-name">$SHIB2</div>
+                    <div class="token-mc">$134K</div>
+                    <div class="token-liq">$15K</div>
+                    <div class="token-ratio positive">4.5:1</div>
+                    <div class="token-holders">112</div>
+                    <div class="token-time">10m</div>
+                    <div class="token-top-wallet">3.5%</div>
                 </div>
             </div>
         </div>
@@ -125,6 +253,23 @@
                         <span class="check-item passed">✓ LP</span>
                         <span class="check-item passed">✓ Contract</span>
                         <span class="check-item warning">? Holders</span>
+                    </div>
+                </div>
+                <div class="opportunity-entry">
+                    <div class="opp-header">
+                        <span class="opp-name">$DOGE3</span>
+                        <span class="opp-score">82/100</span>
+                    </div>
+                    <div class="opp-metrics">
+                        <div class="opp-metric">MC: $167K</div>
+                        <div class="opp-metric">Liq: $18K</div>
+                        <div class="opp-metric">Age: 3m</div>
+                        <div class="opp-metric positive">B/S: 3.8:1</div>
+                    </div>
+                    <div class="safety-checks">
+                        <span class="check-item passed">✓ LP</span>
+                        <span class="check-item passed">✓ Contract</span>
+                        <span class="check-item passed">✓ Holders</span>
                     </div>
                 </div>
             </div>

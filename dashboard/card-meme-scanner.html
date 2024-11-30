@@ -48,7 +48,7 @@
 
     /* Token time styling */
     .token-time {
-        color: #ffffff !important;
+        color: #00ff00 !important;
     }
 
     /* Feed headers styling */
@@ -99,18 +99,23 @@
         font-size: 1.3vh;
     }
 
-    .token-time { color: #00ff00; }
+    .token-time { color: #00ff00 !important; }
     .token-name { color: #00ff00; }
     .token-mc { color: #00ff00; }
-    .token-liq { color: #00cc00; font-size: 1.3vh; }
-    .token-ratio.positive { color: #00ff00; }
+    .token-liq { color: #00ff00 !important; font-size: 1.3vh; }
+    .token-ratio { color: #00ff00; }
     .token-ratio.negative { color: #ff0000; }
-    .token-holders { color: #00cc00; font-size: 1.3vh; }
-    .token-top-wallet { color: #00cc00; font-size: 1.3vh; }
+    .token-holders { color: #00ff00 !important; font-size: 1.3vh; }
+    .token-top-wallet { 
+        color: #00ff00 !important; 
+        font-size: 1.3vh;
+        text-align: right;
+        padding-right: 0px;
+    }
 
     /* Highlight dangerous values */
-    .token-top-wallet[data-value="high"] { color: #ff0000; }
-    .token-liq[data-value="low"] { color: #ff6600; }
+    .token-top-wallet[data-value="high"] { color: #ff0000 !important; }
+    .token-liq[data-value="low"] { color: #ff0000 !important; }
 
     /* Add styles for the subheader */
     .feed-subheader {
@@ -125,6 +130,11 @@
         margin-bottom: 0.5vh;
     }
 
+    .feed-subheader .token-top-wallet {
+        text-align: right;
+        padding-right: 8px;
+    }
+
     .feed-header {
         margin-bottom: 1vh;
     }
@@ -135,9 +145,151 @@
     }
 
     /* Remove individual size overrides */
-    .token-liq, .token-holders, .token-top-wallet {
-        color: #00cc00;
+    .token-holders {
+        color: #00ff00 !important;
     }
+
+    .feed-subheader .token-time {
+        position: relative;
+        margin-left: 13px;
+        text-align: right;
+    }
+
+    .token-entry .token-time {
+        position: relative;
+        margin-left: 22px;
+        text-align: right;
+    }
+
+    .token-entry .token-holders {
+        position: relative;
+        left: 20px;
+        text-align: right;
+    }
+
+    /* For the B/S ratios, let's fix their alignment */
+    .token-entry .token-ratio {
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+    }
+
+    /* Token feed styling */
+    .token-feed {
+        margin-bottom: 1vh;
+        position: relative;
+    }
+
+    /* Feed headers styling */
+    .feed-header {
+        font-size: 1.3vh;
+        color: #00ff00;
+        margin-bottom: 0.5vh;
+        padding: 1vh;
+        font-weight: normal;
+    }
+
+    /* Update token entry and subheader styling */
+    .feed-subheader,
+    .token-entry {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 0.8fr 0.7fr 0.8fr 0.6fr 0.7fr;
+        gap: 8px;
+        align-items: center;
+        padding: 2px 8px;
+        min-height: 24px;
+        font-size: 1.24vh;
+    }
+
+    .feed-subheader {
+        position: sticky;
+        top: 0;
+        background: #000000;
+        z-index: 2;
+        border-bottom: 1px solid #003300;
+        color: #00aa00;
+        font-weight: normal;
+        padding: 2px 8px;
+        min-height: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Column-specific styling */
+    .token-name { 
+        grid-column: 1;
+        padding-left: 0;
+        text-align: left;
+    }
+    .token-mc { 
+        grid-column: 2;
+        text-align: right;
+        padding-right: 4px;
+    }
+    .token-liq { 
+        grid-column: 3;
+        text-align: right;
+        padding-right: 4px;
+    }
+    .token-ratio { 
+        grid-column: 4;
+        text-align: center;
+        padding: 0 4px;
+    }
+    .token-holders { 
+        grid-column: 5;
+        text-align: right;
+        padding-right: 4px;
+    }
+    .token-time { 
+        grid-column: 6;
+        text-align: center;
+        padding: 0 4px;
+    }
+    .token-top-wallet { 
+        grid-column: 7;
+        text-align: right;
+        padding-right: 2px;
+    }
+
+    /* Remove individual positioning overrides */
+    .token-entry .token-time,
+    .feed-subheader .token-time,
+    .token-entry .token-holders {
+        position: static;
+        margin-left: 0;
+        left: auto;
+    }
+
+    /* Scrollable feed */
+    .scrollable-feed {
+        max-height: none;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding: 0;
+    }
+
+    .scrollable-feed::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Token colors */
+    .token-name,
+    .token-mc,
+    .token-liq,
+    .token-holders,
+    .token-time,
+    .token-top-wallet { 
+        color: #00ff00 !important;
+        font-size: 1.24vh;
+    }
+
+    .token-ratio.positive { color: #00ff00; }
+    .token-ratio.negative { color: #ff0000; }
+
+    /* Highlight dangerous values */
+    .token-top-wallet[data-value="high"] { color: #ff0000 !important; }
+    .token-liq[data-value="low"] { color: #ff0000 !important; }
 </style>
 
 <div id="meme-scanner" class="card">

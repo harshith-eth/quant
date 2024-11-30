@@ -302,6 +302,112 @@
     .opportunity-metrics {
         margin-top: 15px;
         margin-bottom: 1vh;
+        background: transparent;
+        min-height: 16vh;
+    }
+
+    .opportunity-entry {
+        border-bottom: 1px solid #001100;
+        margin-bottom: 8px;
+        padding: 8px;
+        background: rgba(0, 10, 0, 0.2);
+        font-family: 'Courier New', monospace;
+        min-height: 12vh;
+        position: relative;
+    }
+
+    .opportunity-entry.high-potential {
+        background: rgba(0, 20, 0, 0.15);
+        border: 1px solid #003300;
+        box-shadow: inset 0 0 8px rgba(0, 255, 0, 0.1);
+    }
+
+    .opportunity-entry.high-potential::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid rgba(0, 255, 0, 0.15);
+        pointer-events: none;
+        animation: pulseGlow 2s infinite;
+    }
+
+    @keyframes pulseGlow {
+        0% { border-color: rgba(0, 255, 0, 0.15); }
+        50% { border-color: rgba(0, 255, 0, 0.25); }
+        100% { border-color: rgba(0, 255, 0, 0.15); }
+    }
+
+    .opportunity-entry.high-potential .opp-name {
+        text-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+    }
+
+    .opp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+    }
+
+    .opp-name {
+        font-size: 1.4vh;
+        color: #00ff00;
+        letter-spacing: 1px;
+    }
+
+    .opp-score {
+        color: #00ff00;
+        font-size: 1.2vh;
+        padding: 2px 6px;
+        border: 1px solid #004400;
+        background: rgba(0, 20, 0, 0.3);
+    }
+
+    .opp-metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-bottom: 6px;
+        font-size: 1.3vh;
+    }
+
+    .opp-metric {
+        color: #00ff00;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 0.5px;
+    }
+
+    .safety-checks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 6px;
+        padding-top: 6px;
+        border-top: 1px solid #001100;
+    }
+
+    .check-item {
+        color: #00ff00;
+        font-size: 1.1vh;
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        background: rgba(0, 15, 0, 0.4);
+        padding: 1px 4px;
+        border-radius: 1px;
+        border: 1px solid #002200;
+        letter-spacing: 0.5px;
+        min-width: 50px;
+        justify-content: center;
+    }
+
+    .check-item.warning {
+        border-color: #332200;
+        color: #ffaa00;
+        background: rgba(30, 15, 0, 0.4);
     }
 
     /* Market Heat Tag Styling */
@@ -336,6 +442,13 @@
     .token-entry:last-child {
         border-bottom: none;
         margin-bottom: 2px;
+    }
+
+    .scrollable-list {
+        max-height: 14vh;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 </style>
 
@@ -522,9 +635,12 @@
                         <div class="opp-metric positive">B/S: 5.2:1</div>
                     </div>
                     <div class="safety-checks">
-                        <span class="check-item passed">✓ LP</span>
-                        <span class="check-item passed">✓ Contract</span>
-                        <span class="check-item passed">✓ Holders</span>
+                        <span class="check-item passed">🔒 LP</span>
+                        <span class="check-item passed">📜 Contract</span>
+                        <span class="check-item passed">👥 Holders</span>
+                        <span class="check-item passed">🐋 Whales</span>
+                        <span class="check-item passed">📈 Trend</span>
+                        <span class="check-item passed">💬 Social</span>
                     </div>
                 </div>
                 <div class="opportunity-entry">
@@ -539,9 +655,12 @@
                         <div class="opp-metric positive">B/S: 4.1:1</div>
                     </div>
                     <div class="safety-checks">
-                        <span class="check-item passed">✓ LP</span>
-                        <span class="check-item passed">✓ Contract</span>
-                        <span class="check-item warning">? Holders</span>
+                        <span class="check-item passed">🔒 LP</span>
+                        <span class="check-item passed">📜 Contract</span>
+                        <span class="check-item warning">👥 Holders</span>
+                        <span class="check-item passed">🐋 Whales</span>
+                        <span class="check-item warning">📈 Trend</span>
+                        <span class="check-item passed">💬 Social</span>
                     </div>
                 </div>
                 <div class="opportunity-entry">
@@ -556,9 +675,12 @@
                         <div class="opp-metric positive">B/S: 3.8:1</div>
                     </div>
                     <div class="safety-checks">
-                        <span class="check-item passed">✓ LP</span>
-                        <span class="check-item passed">✓ Contract</span>
-                        <span class="check-item passed">✓ Holders</span>
+                        <span class="check-item passed">🔒 LP</span>
+                        <span class="check-item passed">📜 Contract</span>
+                        <span class="check-item passed">👥 Holders</span>
+                        <span class="check-item warning">🐋 Whales</span>
+                        <span class="check-item passed">📈 Trend</span>
+                        <span class="check-item warning">💬 Social</span>
                     </div>
                 </div>
             </div>

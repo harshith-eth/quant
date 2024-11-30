@@ -1,18 +1,67 @@
-<h2>AI Analysis</h2>
-<div class="token-metrics">
-    <div class="metric-box">Qwen Analysis: <span id="qwen-signal">SCANNING</span></div>
-    <div class="metric-box">Llama Signal: <span id="llama-signal">SCANNING</span></div>
-    <div class="metric-box">Confidence: <span id="ai-confidence">0%</span></div>
-    <div class="metric-box">Pattern Match: <span id="pattern-match">-</span></div>
+<h2>AI ANALYSIS</h2>
+
+<div class="terminal-box">
+    <div class="scan-line">Qwen Analysis: <span id="qwen-signal">SCANNING</span></div>
+    <div class="scan-line">Llama Signal: <span id="llama-signal">SCANNING</span></div>
+    <div class="scan-line">Confidence: <span id="confidence">0%</span></div>
+    <div class="scan-line">Pattern Match: <span id="pattern-match">-</span></div>
+
+    <div class="init-text">Initializing AI analysis...</div>
+
+    <div class="integration-box">
+        AI INTEGRATION: • Qwen 2.5 Pattern Analysis • Llama 3.1 Sentiment • Historical Pattern Matching • Pump Prediction • Rug Detection
+    </div>
 </div>
-<div id="ai-feed" style="margin-top: 1vh; font-size: 1.2vh;">
-    Initializing AI analysis...
-</div>
-<div class="alert-box">
-    AI INTEGRATION:
-    • Qwen 2.5 Pattern Analysis
-    • Llama 3.1 Sentiment
-    • Historical Pattern Matching
-    • Pump Prediction
-    • Rug Detection
-</div>
+
+<style>
+h2 {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 20px;
+}
+
+.terminal-box {
+    background: #000000;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #00ff00;
+}
+
+.scan-line {
+    color: #00ff00;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #003300;
+}
+
+.init-text {
+    color: #00ff00;
+    margin: 20px 0;
+}
+
+.integration-box {
+    color: #ff0000;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ff0000;
+}
+
+#qwen-signal, #llama-signal {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+</style>
+
+<script>
+// Simple update loop
+setInterval(() => {
+    const signals = ['SCANNING', 'ANALYZING', 'PROCESSING'];
+    document.getElementById('qwen-signal').textContent = signals[Math.floor(Math.random() * signals.length)];
+    document.getElementById('llama-signal').textContent = signals[Math.floor(Math.random() * signals.length)];
+}, 1000);
+</script>

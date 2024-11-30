@@ -98,6 +98,7 @@
         align-items: center;
         border-bottom: 1px solid #001100;
         font-size: 1.3vh;
+        min-height: 2.4vh;
     }
 
     .token-time { color: #00ff00 !important; }
@@ -273,6 +274,7 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
         padding: 0;
+        padding-bottom: 1vh;
     }
 
     .scrollable-feed::-webkit-scrollbar {
@@ -328,6 +330,12 @@
     .market-heat-tag.low {
         background: rgba(0, 255, 0, 0.1);
         color: #00ff00;
+    }
+
+    /* Ensure the last token entry doesn't have a border */
+    .token-entry:last-child {
+        border-bottom: none;
+        margin-bottom: 2px;
     }
 </style>
 

@@ -1,4 +1,6 @@
-<h2 class="card-title">Whale Activity <span id="whale-alert-count" class="alert-count">8</span></h2>
+<h2 class="card-title">Whale Activity <span style="float: right; font-size: 0.9em; font-family: 'Courier New', monospace; color: #00ff00; font-weight: normal;">
+        25KVOL 47MOVES $PEPE2HOT
+    </span></h2>
 <div class="whale-container">
     <div class="whale-filters">
         <button class="filter-btn active">All</button>
@@ -356,3 +358,39 @@
     background: linear-gradient(90deg, #FF5722, #F44336);
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all filter buttons and whale items
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const whaleItems = document.querySelectorAll('.whale-item');
+
+    // Add click event listeners to all filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            // Get the filter type from button text
+            const filterType = this.textContent.toLowerCase();
+
+            // Show/hide whale items based on filter
+            whaleItems.forEach(item => {
+                if (filterType === 'all') {
+                    item.style.display = 'grid';
+                } else {
+                    const action = item.querySelector('.action').textContent.toLowerCase();
+                    if (action === filterType.slice(0, -1)) { // Remove 's' from 'buys'/'sells'/'transfers'
+                        item.style.display = 'grid';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+</script>

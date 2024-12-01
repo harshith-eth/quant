@@ -79,9 +79,27 @@
 }
 
 .filter-btn {
-    font-size: 0.65rem;
-    padding: 1px 6px;
-    margin-right: 3px;
+    background: #001100;
+    border: 1px solid #003300;
+    color: #00ff00;
+    padding: 0.3vh 1vh;
+    cursor: pointer;
+    font-size: 1.24vh;
+    text-shadow: 0 0 2px rgba(0, 255, 0, 0.2);
+    margin-right: 0.5vh;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #001500;
+    border-color: #004400;
+    text-shadow: 0 0 2px rgba(0, 255, 0, 0.3);
+}
+
+.filter-btn.active {
+    background: #001800;
+    border-color: #005500;
+    text-shadow: 0 0 2px rgba(0, 255, 0, 0.4);
 }
 
 .whale-header, .whale-item {

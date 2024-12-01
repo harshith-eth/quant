@@ -129,6 +129,106 @@
                 </div>
             </div>
         </div>
+
+        <!-- Launch Detector Section -->
+        <div class="signal-section">
+            <div class="metric-title">Launch Detector</div>
+            <div class="signal-feed" id="launch-feed">
+                <div class="signal-entry emergency">
+                    [<span class="timestamp">11:42:10</span>] » NEW LAUNCH
+                    <br>• Token: $SOLAPEPE
+                    <br>• Initial LP: $10K
+                    <br>• Time: 2m ago
+                </div>
+                <div class="signal-entry alert">
+                    [<span class="timestamp">11:41:05</span>] » LIQUIDITY ADDED
+                    <br>• Token: $WOJAK
+                    <br>• Amount: 25 SOL
+                    <br>• Buyers: 45
+                </div>
+                <div class="signal-entry">
+                    [<span class="timestamp">11:40:30</span>] » CONTRACT DEPLOYED
+                    <br>• Address: sol...4x2
+                    <br>• Creator: Known Dev
+                    <br>• Pattern: STANDARD
+                </div>
+            </div>
+        </div>
+
+        <!-- Rug Detector Section -->
+        <div class="signal-section">
+            <div class="metric-title">Rug Detector</div>
+            <div class="signal-feed" id="rug-feed">
+                <div class="signal-entry emergency">
+                    [<span class="timestamp">11:42:30</span>] » RUG ALERT
+                    <br>• Token: $RUGCOIN
+                    <br>• LP UNLOCKED ⚠️
+                    <br>• Rug Score: 85/100
+                </div>
+                <div class="signal-entry alert">
+                    [<span class="timestamp">11:41:45</span>] » SAFU CHECK
+                    <br>• Token: $MOONBURN
+                    <br>• LP LOCKED ✅
+                    <br>• Safety: 92/100
+                </div>
+                <div class="signal-entry">
+                    [<span class="timestamp">11:41:00</span>] » WALLET CHECK
+                    <br>• Dev Wallet: 3.2%
+                    <br>• Hidden Wallets: NONE
+                    <br>• Honeypot Risk: LOW
+                </div>
+            </div>
+        </div>
+
+        <!-- Volume Analyzer Section -->
+        <div class="signal-section">
+            <div class="metric-title">Volume Analyzer</div>
+            <div class="signal-feed" id="volume-feed">
+                <div class="signal-entry emergency">
+                    [<span class="timestamp">11:43:15</span>] » VOLUME SPIKE
+                    <br>• $MOONBURN: +500%
+                    <br>• Buy/Sell: 8:1
+                    <br>• Liquidity: DEEP
+                </div>
+                <div class="signal-entry alert">
+                    [<span class="timestamp">11:42:30</span>] » ACCUMULATION
+                    <br>• Token: $PEPENOMICS
+                    <br>• 5m Volume: $50K
+                    <br>• Pattern: BULLISH
+                </div>
+                <div class="signal-entry">
+                    [<span class="timestamp">11:41:45</span>] » DEPTH CHECK
+                    <br>• Buy Wall: 25 SOL
+                    <br>• Sell Impact: 2.5%
+                    <br>• Liquidity: HEALTHY
+                </div>
+            </div>
+        </div>
+
+        <!-- Momentum Scanner Section -->
+        <div class="signal-section">
+            <div class="metric-title">Momentum Scanner</div>
+            <div class="signal-feed" id="momentum-feed">
+                <div class="signal-entry emergency">
+                    [<span class="timestamp">11:43:30</span>] » BREAKOUT
+                    <br>• $WOJAK: +120% 5m
+                    <br>• Momentum: STRONG
+                    <br>• FOMO Score: 85/100
+                </div>
+                <div class="signal-entry alert">
+                    [<span class="timestamp">11:42:45</span>] » TREND ALERT
+                    <br>• Multiple Buys
+                    <br>• Price: PARABOLIC
+                    <br>• Velocity: HIGH
+                </div>
+                <div class="signal-entry">
+                    [<span class="timestamp">11:42:00</span>] » MOMENTUM CHECK
+                    <br>• Buy Pressure: 78%
+                    <br>• Trend Strength: HIGH
+                    <br>• Pattern: EARLY PUMP
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -194,7 +294,7 @@
 }
 
 .metric-title {
-    font-size: 1.2vh;
+    font-size: 1.24vh;
     padding: 0.2vh 0;
     color: #00ff00;
     text-transform: uppercase;
@@ -210,7 +310,7 @@
 }
 
 .signal-entry {
-    font-size: 1.1vh;
+    font-size: 1.24vh;
     margin-bottom: 3px;
     padding: 4px 6px;
     border-radius: 2px;
@@ -234,6 +334,7 @@
 .timestamp {
     color: #00ff00;
     font-weight: bold;
+    font-size: 1.24vh;
 }
 
 .signal-entry.emergency .timestamp {
@@ -321,6 +422,54 @@ const signalData = {
             message: "$FROGO\n• Price: +245%\n• Set SL: -15%",
             type: "alert"
         }
+    ],
+    launch: [
+        {
+            timestamp: "11:42:10",
+            message: "NEW LAUNCH\n• Token: $SOLAPEPE\n• Initial LP: $10K\n• Time: 2m ago",
+            type: "emergency"
+        },
+        {
+            timestamp: "11:41:05",
+            message: "LIQUIDITY ADDED\n• Token: $WOJAK\n• Amount: 25 SOL\n• Buyers: 45",
+            type: "alert"
+        }
+    ],
+    rug: [
+        {
+            timestamp: "11:42:30",
+            message: "RUG ALERT\n• Token: $RUGCOIN\n• LP UNLOCKED ⚠️\n• Rug Score: 85/100",
+            type: "emergency"
+        },
+        {
+            timestamp: "11:41:45",
+            message: "SAFU CHECK\n• Token: $MOONBURN\n• LP LOCKED ✅\n• Safety: 92/100",
+            type: "alert"
+        }
+    ],
+    volume: [
+        {
+            timestamp: "11:43:15",
+            message: "VOLUME SPIKE\n• $MOONBURN: +500%\n• Buy/Sell: 8:1\n• Liquidity: DEEP",
+            type: "emergency"
+        },
+        {
+            timestamp: "11:42:30",
+            message: "ACCUMULATION\n• Token: $PEPENOMICS\n• 5m Volume: $50K\n• Pattern: BULLISH",
+            type: "alert"
+        }
+    ],
+    momentum: [
+        {
+            timestamp: "11:43:30",
+            message: "BREAKOUT\n• $WOJAK: +120% 5m\n• Momentum: STRONG\n• FOMO Score: 85/100",
+            type: "emergency"
+        },
+        {
+            timestamp: "11:42:45",
+            message: "TREND ALERT\n• Multiple Buys\n• Price: PARABOLIC\n• Velocity: HIGH",
+            type: "alert"
+        }
     ]
 };
 
@@ -343,7 +492,7 @@ function addSignalToSection(section, signal) {
 
 // Simulate real-time updates for each section
 function simulateSignals() {
-    const sections = ['market', 'whale', 'social', 'trade'];
+    const sections = ['market', 'whale', 'social', 'trade', 'launch', 'rug', 'volume', 'momentum'];
     sections.forEach(section => {
         const signals = signalData[section];
         let index = 0;

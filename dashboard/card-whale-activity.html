@@ -44,6 +44,120 @@
                 <div class="col amount">1,500 SOL</div>
                 <div class="col impact high">High</div>
             </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x8e2...4d1c</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">3,200 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item sell">
+                <div class="col wallet">0x5a7...1b8d</div>
+                <div class="col action">Sell</div>
+                <div class="col amount">950 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0x2c9...7f4e</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">1,800 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x1d5...6e3a</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">670 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item sell">
+                <div class="col wallet">0xaf3...9c2b</div>
+                <div class="col action">Sell</div>
+                <div class="col amount">4,500 SOL</div>
+                <div class="col impact critical">Critical</div>
+            </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x4b8...2d7c</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">2,300 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0x9e1...5a4d</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">1,100 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item sell">
+                <div class="col wallet">0x7d6...3f8e</div>
+                <div class="col action">Sell</div>
+                <div class="col amount">830 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x2a9...8c4b</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">5,600 SOL</div>
+                <div class="col impact critical">Critical</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0xbc5...1e7d</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">920 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item sell">
+                <div class="col wallet">0x6f8...4a2c</div>
+                <div class="col action">Sell</div>
+                <div class="col amount">1,750 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x3e7...9b5a</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">2,800 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0x8d4...2c6e</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">1,300 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item sell">
+                <div class="col wallet">0x5c2...7f3d</div>
+                <div class="col action">Sell</div>
+                <div class="col amount">3,900 SOL</div>
+                <div class="col impact critical">Critical</div>
+            </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x1a8...4e2b</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">1,600 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0x9f5...3d7c</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">780 SOL</div>
+                <div class="col impact medium">Medium</div>
+            </div>
+            <div class="whale-item sell">
+                <div class="col wallet">0x4c7...8a5e</div>
+                <div class="col action">Sell</div>
+                <div class="col amount">2,500 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
+            <div class="whale-item buy">
+                <div class="col wallet">0x7b3...6d1f</div>
+                <div class="col action">Buy</div>
+                <div class="col amount">4,200 SOL</div>
+                <div class="col impact critical">Critical</div>
+            </div>
+            <div class="whale-item transfer">
+                <div class="col wallet">0x2e6...9c4a</div>
+                <div class="col action">Transfer</div>
+                <div class="col amount">1,900 SOL</div>
+                <div class="col impact high">High</div>
+            </div>
         </div>
     </div>
     <div class="whale-metrics">
@@ -64,7 +178,7 @@
 
 <style>
 .whale-container {
-    height: 25vh;
+    height: 39.5vh;
     display: flex;
     flex-direction: column;
 }
@@ -120,6 +234,7 @@
 .whale-list {
     flex: 1;
     overflow: hidden;
+    min-height: 0;
 }
 
 .whale-item {
@@ -205,13 +320,15 @@
 }
 
 .whale-scrollable {
-    height: 100%;
+    height: calc(100% - 30px);
     overflow-y: auto;
 }
 
 .whale-metrics {
-    margin-top: 0.3rem;
     font-size: 0.7rem;
+    padding: 4px 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 255, 0, 0.1);
 }
 
 .metric-box {

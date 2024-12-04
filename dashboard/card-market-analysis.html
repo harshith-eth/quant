@@ -1,27 +1,755 @@
-<h2>Market Analysis</h2>
-<div class="analysis-grid">
-    <div class="analysis-section">
-        <div class="section-title">Price Action</div>
-        <div class="metric-box">1m: <span id="price-1m">0%</span></div>
-        <div class="metric-box">5m: <span id="price-5m">0%</span></div>
-        <div class="metric-box">15m: <span id="price-15m">0%</span></div>
+<!DOCTYPE html>
+<div class="market-analysis-card-container">
+    <div class="header">
+        <h2>MARKET AUTISM MATRIX</h2>
+        <div class="matrix-rain">01101</div>
     </div>
-    <div class="analysis-section">
-        <div class="section-title">Volume Analysis</div>
-        <div class="metric-box">Buy Vol: <span id="buy-vol">$0K</span></div>
-        <div class="metric-box">Sell Vol: <span id="sell-vol">$0K</span></div>
-        <div class="metric-box">Ratio: <span id="vol-ratio">0</span></div>
-    </div>
-    <div class="analysis-section">
-        <div class="section-title">Liquidity</div>
-        <div class="metric-box">Total: <span id="total-liq">$0K</span></div>
-        <div class="metric-box">Locked: <span id="locked-liq">0%</span></div>
-        <div class="metric-box">Health: <span id="liq-health">-</span></div>
+
+    <div class="analysis-container">
+        <!-- Money Flow Heatmap -->
+        <div class="analysis-panel">
+            <h3>💸 DEGEN MONEY FLOW</h3>
+            <div class="heatmap-grid">
+                <div class="heatmap-cell hot">
+                    <span class="label">PEPE</span>
+                    <span class="flow">+420%</span>
+                </div>
+                <div class="heatmap-cell warning">
+                    <span class="label">WOJAK</span>
+                    <span class="flow">+169%</span>
+                </div>
+                <div class="heatmap-cell dead">
+                    <span class="label">CHAD</span>
+                    <span class="flow">-99%</span>
+                </div>
+                <div class="heatmap-cell nuclear">
+                    <span class="label">ELON</span>
+                    <span class="flow">+1337%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Retard Strength Index -->
+        <div class="analysis-panel">
+            <h3>🦍 RETARD STRENGTH INDEX</h3>
+            <div class="strength-meter">
+                <div class="meter-bar">
+                    <div class="fill" style="width: 85%"></div>
+                </div>
+                <div class="meter-labels">
+                    <span>WEAK</span>
+                    <span>HODL</span>
+                    <span>STRONG</span>
+                    <span class="current">RETARDED</span>
+                </div>
+            </div>
+            <div class="strength-stats">
+                <div class="stat">
+                    <span>Paper Hands Ratio:</span>
+                    <span class="value decreasing">-69%</span>
+                </div>
+                <div class="stat">
+                    <span>Diamond Hands:</span>
+                    <span class="value increasing">+420%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Manipulation Scanner -->
+        <div class="analysis-panel danger">
+            <h3>🎯 MANIPULATION RADAR</h3>
+            <div class="radar-display">
+                <div class="radar-sweep"></div>
+                <div class="target" style="top: 30%; left: 60%"></div>
+                <div class="target" style="top: 45%; left: 25%"></div>
+                <div class="target" style="top: 70%; left: 80%"></div>
+            </div>
+            <div class="manipulation-alerts">
+                <div class="alert">
+                    <span class="time">NOW</span>
+                    <span class="event">PUMP GROUP FORMING</span>
+                    <span class="probability">95%</span>
+                </div>
+                <div class="alert">
+                    <span class="time">5m</span>
+                    <span class="event">WHALE ACCUMULATION</span>
+                    <span class="probability">87%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Volume Profile -->
+        <div class="analysis-panel">
+            <h3>📊 DEGEN VOLUME PROFILE</h3>
+            <div class="volume-container">
+                <!-- Volume Chart -->
+                <div class="volume-chart">
+                    <!-- Time Labels -->
+                    <div class="time-row">
+                        <span>5m</span>
+                        <span>NOW</span>
+                        <span>PRED</span>
+                    </div>
+
+                    <!-- Volume Bars -->
+                    <div class="bars-container">
+                        <!-- 5m Bar -->
+                        <div class="bar-column">
+                            <div class="value-label">$169K</div>
+                            <div class="bar-wrapper">
+                                <div class="bot-volume" style="height: 20%">
+                                    <span>$420K</span>
+                                </div>
+                                <div class="human-volume" style="height: 15%"></div>
+                            </div>
+                        </div>
+
+                        <!-- NOW Bar -->
+                        <div class="bar-column">
+                            <div class="value-label">$2.1M</div>
+                            <div class="bar-wrapper">
+                                <div class="bot-volume" style="height: 60%">
+                                    <span>$4.2M</span>
+                                </div>
+                                <div class="human-volume" style="height: 40%"></div>
+                            </div>
+                        </div>
+
+                        <!-- PRED Bar -->
+                        <div class="bar-column">
+                            <div class="value-label">$4.2M</div>
+                            <div class="bar-wrapper">
+                                <div class="bot-volume predicted" style="height: 70%">
+                                    <span>$6.9M</span>
+                                </div>
+                                <div class="human-volume predicted" style="height: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="volume-legend">
+                        <div class="legend-item">
+                            <span class="legend-box human"></span>
+                            <span>Human Volume</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-box bot"></span>
+                            <span>Bot Volume</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics -->
+                <div class="metrics-row">
+                    <div class="metric-box">
+                        <span class="metric-label">BOT/HUMAN RATIO</span>
+                        <span class="metric-value">6.9x ↗️</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-label">VOLUME CHANGE</span>
+                        <span class="metric-value hot">+420% 🚀</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Cycle -->
+        <div class="analysis-panel">
+            <h3>🌊 MARKET CYCLE</h3>
+            <div class="cycle-container">
+                <div class="cycle-stages">
+                    <div class="stage-box" data-stage="STEALTH">
+                        <div class="stage-dot"></div>
+                        <span>STEALTH</span>
+                        <div class="stage-value">+10x</div>
+                    </div>
+                    <div class="stage-box active" data-stage="FOMO">
+                        <div class="stage-dot"></div>
+                        <span>FOMO</span>
+                        <div class="stage-value">+50x</div>
+                    </div>
+                    <div class="stage-box next" data-stage="MOON">
+                        <div class="stage-dot"></div>
+                        <span>MOON</span>
+                        <div class="stage-value">+100x</div>
+                    </div>
+                    <div class="stage-box" data-stage="DUMP">
+                        <div class="stage-dot"></div>
+                        <span>DUMP</span>
+                        <div class="stage-value">-90%</div>
+                    </div>
+                </div>
+                
+                <div class="cycle-progress">
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="cycle-prediction">
+                        <div class="prediction-label">NEXT:</div>
+                        <div class="prediction-value blink">ULTRA MOON</div>
+                        <div class="time-left">≈ 2.5 MINS</div>
+                    </div>
+                </div>
+
+                <div class="cycle-metrics">
+                    <div class="metric">
+                        <span>NORMIE FOMO:</span>
+                        <span class="value increasing">↗️ EXTREME</span>
+                    </div>
+                    <div class="metric">
+                        <span>DEGEN APE:</span>
+                        <span class="value hot">🔥 MAXIMUM</span>
+                    </div>
+                    <div class="metric">
+                        <span>RUG RISK:</span>
+                        <span class="value warning">⚠️ HIGH AF</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div class="pattern-detection">
-    <div class="pattern-title">Pattern Detection</div>
-    <div class="pattern-list" id="detected-patterns">
-        <!-- Dynamic patterns will appear here -->
-    </div>
-</div>
+
+<style>
+.market-analysis-card-container {
+    background: #0a0a0a;
+    border: 1px solid #1b1f24;
+    border-radius: 0.5rem;
+    height: 39.5vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+.market-analysis-card-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: #0d1117;
+    border-bottom: 1px solid #1b1f24;
+}
+
+.market-analysis-card-container .header h2 {
+    color: #00ff00;
+    font-size: 1rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.market-analysis-card-container .matrix-rain {
+    color: #00ff00;
+    font-size: 0.875rem;
+    animation: market-matrix 1s infinite;
+}
+
+.market-analysis-card-container .analysis-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.75rem;
+    display: grid;
+    grid-gap: 0.75rem;
+    scrollbar-width: thin;
+    scrollbar-color: #00ff00 #0a0a0a;
+}
+
+.market-analysis-card-container .analysis-panel {
+    background: #0d1117;
+    border: 1px solid #1b1f24;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+}
+
+.market-analysis-card-container .analysis-panel.danger {
+    border-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+.market-analysis-card-container .analysis-panel h3 {
+    color: #00ff00;
+    font-size: 0.875rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.market-analysis-card-container .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.market-analysis-card-container .heatmap-cell {
+    background: #1a1a1a;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.market-analysis-card-container .heatmap-cell.hot {
+    background: rgba(255, 62, 0, 0.2);
+}
+
+.market-analysis-card-container .heatmap-cell.warning {
+    background: rgba(255, 170, 0, 0.2);
+}
+
+.market-analysis-card-container .heatmap-cell.dead {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+.market-analysis-card-container .heatmap-cell.nuclear {
+    background: rgba(0, 255, 0, 0.2);
+    animation: pulse 1s infinite;
+}
+
+.market-analysis-card-container .strength-meter {
+    margin-bottom: 1rem;
+}
+
+.market-analysis-card-container .meter-bar {
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.market-analysis-card-container .meter-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ffaa00, #00ff00);
+    transition: width 0.3s ease;
+}
+
+.market-analysis-card-container .meter-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #8b949e;
+}
+
+.market-analysis-card-container .meter-labels .current {
+    color: #00ff00;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+.market-analysis-card-container .radar-display {
+    position: relative;
+    height: 150px;
+    background: #0a0a0a;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.market-analysis-card-container .radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(90deg, transparent 50%, rgba(0, 255, 0, 0.1) 100%);
+    animation: market-sweep 4s infinite linear;
+    transform-origin: 0 0;
+}
+
+.market-analysis-card-container .target {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff0000;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+.market-analysis-card-container .manipulation-alerts {
+    font-size: 0.75rem;
+}
+
+.market-analysis-card-container .alert {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.market-analysis-card-container .alert .time {
+    color: #8b949e;
+}
+
+.market-analysis-card-container .alert .event {
+    color: #ff0000;
+}
+
+.market-analysis-card-container .alert .probability {
+    color: #00ff00;
+}
+
+.market-analysis-card-container .volume-container {
+    background: #0d1117;
+    border-radius: 4px;
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+}
+
+.market-analysis-card-container .volume-chart {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.market-analysis-card-container .time-row {
+    display: flex;
+    justify-content: space-around;
+    color: #4a5568;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.market-analysis-card-container .bars-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 1rem 0;
+}
+
+.market-analysis-card-container .bar-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+}
+
+.market-analysis-card-container .value-label {
+    color: #4a5568;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.market-analysis-card-container .bar-wrapper {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+}
+
+.market-analysis-card-container .bot-volume, .market-analysis-card-container .human-volume {
+    width: 100%;
+    position: relative;
+    transition: height 0.3s ease;
+}
+
+.market-analysis-card-container .bot-volume {
+    background: #7f1d1d;
+    border: 1px solid #dc2626;
+}
+
+.market-analysis-card-container .human-volume {
+    background: #064e3b;
+    border: 1px solid #00ff00;
+    margin-top: 1px;
+}
+
+.market-analysis-card-container .predicted {
+    border-style: dashed;
+    opacity: 0.8;
+}
+
+.market-analysis-card-container .bot-volume span {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4a5568;
+    font-size: 0.75rem;
+}
+
+.market-analysis-card-container .volume-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.market-analysis-card-container .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    font-size: 0.75rem;
+}
+
+.market-analysis-card-container .legend-box {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.market-analysis-card-container .legend-box.human {
+    background: #064e3b;
+    border: 1px solid #00ff00;
+}
+
+.market-analysis-card-container .legend-box.bot {
+    background: #7f1d1d;
+    border: 1px solid #dc2626;
+}
+
+.market-analysis-card-container .metrics-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1f2937;
+}
+
+.market-analysis-card-container .metric-box {
+    background: #1f2937;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.market-analysis-card-container .metric-label {
+    display: block;
+    color: #4a5568;
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.market-analysis-card-container .metric-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.market-analysis-card-container .metric-value.hot {
+    color: #dc2626;
+}
+
+.market-analysis-card-container .cycle-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+}
+
+.market-analysis-card-container .cycle-stages {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.market-analysis-card-container .cycle-stages::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(0, 255, 0, 0.2);
+    z-index: 1;
+}
+
+.market-analysis-card-container .stage-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 25%;
+}
+
+.market-analysis-card-container .stage-dot {
+    width: 12px;
+    height: 12px;
+    background: #1a1a1a;
+    border: 2px solid #00ff00;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.market-analysis-card-container .stage-box.active .stage-dot {
+    background: #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.market-analysis-card-container .stage-box.next .stage-dot {
+    animation: pulse-next 2s infinite;
+}
+
+.market-analysis-card-container .stage-box span {
+    display: block;
+    font-size: 0.75rem;
+    color: #8b949e;
+    margin-top: 0.25rem;
+}
+
+.market-analysis-card-container .stage-box.active span {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.market-analysis-card-container .stage-value {
+    font-size: 0.7rem;
+    color: #00ff00;
+    opacity: 0.7;
+}
+
+.market-analysis-card-container .cycle-progress {
+    margin: 1rem 0;
+}
+
+.market-analysis-card-container .progress-track {
+    height: 4px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.market-analysis-card-container .progress-fill {
+    height: 100%;
+    width: 65%;
+    background: linear-gradient(90deg, #00ff00, #ffaa00);
+    animation: progress-pulse 2s infinite;
+}
+
+.market-analysis-card-container .cycle-prediction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.market-analysis-card-container .prediction-label {
+    color: #8b949e;
+}
+
+.market-analysis-card-container .prediction-value {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.market-analysis-card-container .time-left {
+    color: #ffaa00;
+    font-size: 0.75rem;
+}
+
+.market-analysis-card-container .cycle-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.market-analysis-card-container .metric {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.market-analysis-card-container .metric span:first-child {
+    color: #8b949e;
+}
+
+.market-analysis-card-container .metric .value {
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: bold;
+}
+
+.market-analysis-card-container .value.increasing {
+    color: #00ff00;
+}
+
+.market-analysis-card-container .value.hot {
+    color: #ff3e00;
+}
+
+.market-analysis-card-container .value.warning {
+    color: #ffaa00;
+}
+
+.market-analysis-card-container .blink {
+    animation: blink-text 1s infinite;
+}
+
+@keyframes pulse-next {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(0, 255, 0, 0);
+    }
+}
+
+@keyframes progress-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes blink-text {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes market-matrix {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes market-sweep {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes market-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes market-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes market-highlight-pulse {
+    0%, 100% {
+        background: #1a1a1a;
+    }
+    50% {
+        background: rgba(0, 255, 0, 0.1);
+    }
+}
+</style>
+
+<script>
+// Animate the cycle needle
+setInterval(() => {
+    const needle = document.querySelector('.cycle-needle');
+    const rotation = Math.random() * 180;
+    needle.style.transform = `rotate(${rotation}deg)`;
+}, 4000);
+
+// Update matrix rain
+setInterval(() => {
+    const matrix = document.querySelector('.matrix-rain');
+    matrix.textContent = Math.random().toString(2).substr(2, 5);
+}, 200);
+</script> 

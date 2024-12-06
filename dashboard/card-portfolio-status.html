@@ -1,51 +1,453 @@
-<h2>Portfolio Status 
-    <div style="display: flex; align-items: center; gap: 8px;">
-        <div class="goal-text">TARGET: $500</div>
-        <div class="header-progress">
-            <div class="header-progress-fill" style="width: 11.6%"></div>
+<!DOCTYPE html>
+<div class="portfolio-status-container">
+    <h2>PORTFOLIO STATUS 
+        <span style="float: right; font-size: 0.9em; font-family: 'Courier New', monospace; color: #00ff00; font-weight: normal;">
+            11001
+        </span>
+        <div class="goal-container">
+            <div class="goal-text">TARGET: $20,000</div>
+            <div class="header-progress">
+                <div class="header-progress-fill pulse" style="width: 0.125%"></div>
+            </div>
+        </div>
+    </h2>
+
+    <div class="portfolio-content">
+        <div class="analysis-container">
+            <!-- Balance Overview -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    💰 BALANCE STATUS
+                </div>
+                <div class="section-content">
+                    <div class="balance-grid">
+                        <div class="balance-item">
+                            <div class="matrix-header">INITIAL</div>
+                            <div class="value">$25.00</div>
+                        </div>
+                        <div class="balance-item highlight matrix-box">
+                            <div class="matrix-header">CURRENT</div>
+                            <div class="value" id="current-balance">$25.00</div>
+                            <div class="matrix-grid"></div>
+                        </div>
+                        <div class="balance-item">
+                            <div class="matrix-header">TARGET</div>
+                            <div class="value profit-target success">$20,000.00</div>
+                        </div>
+                        <div class="balance-item">
+                            <div class="matrix-header">NEEDED</div>
+                            <div class="value warning pulse" id="gain-needed">79,900%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Status -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    🎯 FUNDS ALLOCATION
+                </div>
+                <div class="section-content">
+                    <div class="allocation-display">
+                        <div class="allocation-bars">
+                            <div class="allocation-bar">
+                                <div class="label">AVAILABLE</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill success" style="width: 100%"></div>
+                                </div>
+                                <div class="value" id="available-balance">$25.00</div>
+                            </div>
+                            <div class="allocation-bar">
+                                <div class="label">IN TRADES</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill warning" style="width: 0%"></div>
+                                </div>
+                                <div class="value" id="allocated-balance">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Stats -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    📊 PERFORMANCE
+                </div>
+                <div class="section-content">
+                    <div class="performance-grid">
+                        <div class="perf-item">
+                            <div class="matrix-header">24H PROFIT</div>
+                            <div class="value" id="daily-pl">0.00%</div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="matrix-header">TOTAL GAIN</div>
+                            <div class="value" id="total-roi">0.00%</div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="matrix-header">WIN RATE</div>
+                            <div class="value" id="win-rate">0/0</div>
+                        </div>
+                        <div class="perf-item">
+                            <div class="matrix-header">AVG WIN</div>
+                            <div class="value" id="avg-profit">0.00%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trade History -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    📈 TRADE HISTORY
+                </div>
+                <div class="section-content">
+                    <div class="records-grid matrix-box">
+                        <div class="record-item">
+                            <div class="matrix-header">BEST</div>
+                            <div class="value success" id="best-trade">0.00%</div>
+                        </div>
+                        <div class="record-item">
+                            <div class="matrix-header">WORST</div>
+                            <div class="value danger" id="worst-trade">0.00%</div>
+                        </div>
+                        <div class="record-item">
+                            <div class="matrix-header">DRAWDOWN</div>
+                            <div class="value warning" id="max-drawdown">0.00%</div>
+                        </div>
+                        <div class="record-item">
+                            <div class="matrix-header">RISK LEVEL</div>
+                            <div class="value pulse" id="portfolio-heat">LOW</div>
+                        </div>
+                        <div class="matrix-grid"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Take Profit Levels -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    🎯 TAKE PROFIT LEVELS
+                </div>
+                <div class="section-content">
+                    <div class="tp-container">
+                        <div class="tp-grid">
+                            <div class="tp-level">
+                                <div class="tp-header">2X TARGET</div>
+                                <div class="tp-value tp-waiting pulse">$50.00</div>
+                                <div class="tp-status">Waiting</div>
+                            </div>
+                            <div class="tp-level">
+                                <div class="tp-header">5X TARGET</div>
+                                <div class="tp-value tp-waiting">$125.00</div>
+                                <div class="tp-status">Waiting</div>
+                            </div>
+                            <div class="tp-level">
+                                <div class="tp-header">10X TARGET</div>
+                                <div class="tp-value tp-waiting">$250.00</div>
+                                <div class="tp-status">Waiting</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</h2>
-
-<div class="scanner-metrics">
-    <div class="metric-group">
-        <div class="metric-title">Balance Overview</div>
-        <div class="metric-box">Initial: $25.00</div>
-        <div class="metric-box">Current: $<span id="current-balance">25.00</span></div>
-        <div class="metric-box">Target: $<span class="profit-target">500.00</span></div>
-        <div class="metric-box">Needed: <span id="gain-needed">1,900%</span></div>
-    </div>
-
-    <div class="metric-group">
-        <div class="metric-title">Account Status</div>
-        <div class="metric-box">Available: $<span id="available-balance">25.00</span></div>
-        <div class="metric-box">Allocated: $<span id="allocated-balance">0.00</span></div>
-    </div>
 </div>
 
-<div class="scanner-metrics">
-    <div class="metric-group">
-        <div class="metric-title">Performance</div>
-        <div class="metric-box">24h P/L: <span id="daily-pl">0.00%</span></div>
-        <div class="metric-box">Total ROI: <span id="total-roi">0.00%</span></div>
-        <div class="metric-box">Win Rate: <span id="win-rate">0/0</span></div>
-        <div class="metric-box">Avg Profit: <span id="avg-profit">0.00%</span></div>
-    </div>
+<style>
+.portfolio-status-container {
+    height: 39.5vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    background: transparent;
+}
 
-    <div class="metric-group">
-        <div class="metric-title">Trade Records</div>
-        <div class="metric-box">Best Trade: <span id="best-trade">0.00%</span></div>
-        <div class="metric-box">Worst Trade: <span id="worst-trade">0.00%</span></div>
-        <div class="metric-box">Max Drawdown: <span id="max-drawdown">0.00%</span></div>
-        <div class="metric-box">Portfolio Heat: <span id="portfolio-heat">LOW</span></div>
-    </div>
-</div>
+.portfolio-status-container h2 {
+    padding: 0.5vh;
+    margin: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 3 !important;
+    background: linear-gradient(90deg, #001100 0%, #000300 100%);
+    border-bottom: 1px solid #00ff00;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    font-size: 1.24vh;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-<div class="alert-box">
-    <div class="criteria-title">Take Profit Targets:</div>
-    <div class="criteria-list">
-        <div class="criteria-item">TP1 (2x): <span class="tp-waiting">Waiting</span></div>
-        <div class="criteria-item">TP2 (5x): <span class="tp-waiting">Waiting</span></div>
-        <div class="criteria-item">TP3 (10x): <span class="tp-waiting">Waiting</span></div>
-    </div>
-</div>
+.goal-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.goal-text {
+    color: #00ff00;
+    font-size: 0.9em;
+}
+
+.header-progress {
+    width: 100px;
+    height: 4px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ff00, #00aa00);
+    transition: width 0.5s ease;
+}
+
+.portfolio-content {
+    position: absolute !important;
+    top: 3vh !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow-y: auto !important;
+    padding: 0.5vh !important;
+    background: rgba(0, 5, 0, 0.2);
+    font-family: 'Courier New', monospace;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+
+.portfolio-content::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+}
+
+.analysis-container {
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-gap: 0.2rem;
+    padding: 0.3vh;
+    background: rgba(0, 5, 0, 0.2);
+}
+
+.analysis-section {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+    border-radius: 0;
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #00ff00;
+    font-size: 1.24vh;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-content {
+    padding: 0.2rem;
+}
+
+.matrix-box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+    padding: 0.3rem;
+    overflow: hidden;
+}
+
+.matrix-grid {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(#00ff0011 1px, transparent 1px) 0 0 / 20px 20px,
+        linear-gradient(90deg, #00ff0011 1px, transparent 1px) 0 0 / 20px 20px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.matrix-header {
+    color: #8b949e;
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+
+.balance-grid, .performance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.3rem;
+}
+
+.balance-item, .perf-item {
+    padding: 0.3rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.balance-item .value, 
+.perf-item .value {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #00ff00;
+    margin-top: 0.2rem;
+}
+
+.allocation-display {
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.allocation-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.allocation-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.allocation-bar .label {
+    width: 80px;
+    color: #8b949e;
+    font-size: 0.7rem;
+}
+
+.bar-container {
+    flex-grow: 1;
+    height: 4px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.bar-fill.success {
+    background: linear-gradient(90deg, #00ff00, #00aa00);
+}
+
+.bar-fill.warning {
+    background: linear-gradient(90deg, #ffaa00, #ff7700);
+}
+
+.allocation-bar .value {
+    width: 70px;
+    text-align: right;
+    color: #00ff00;
+    font-size: 0.8rem;
+}
+
+.records-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.3rem;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.record-item {
+    text-align: center;
+    z-index: 1;
+}
+
+.tp-container {
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.tp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
+}
+
+.tp-level {
+    text-align: center;
+}
+
+.tp-header {
+    color: #8b949e;
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+}
+
+.tp-value {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0.2rem 0;
+}
+
+.tp-status {
+    font-size: 0.7rem;
+    color: #8b949e;
+}
+
+.tp-waiting {
+    color: #ffaa00;
+}
+
+.success { color: #00ff00 !important; }
+.warning { color: #ffaa00 !important; }
+.danger { color: #ff0000 !important; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.highlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(0, 255, 0, 0.1) 50%,
+        transparent 100%
+    );
+    animation: highlight-sweep 2s infinite;
+}
+
+@keyframes highlight-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+</style>

@@ -2,269 +2,215 @@
 <div class="risk-management-container">
     <h2>RISK MANAGEMENT 
         <span style="float: right; font-size: 0.9em; font-family: 'Courier New', monospace; color: #00ff00; font-weight: normal;">
-            01101
+            01010
         </span>
     </h2>
 
-    <!-- Rugpull Risk Analysis -->
-    <div class="metric-panel danger-zone">
-        <h3>🚨 RUG ALERT</h3>
-        <div class="rug-metrics">
-            <div class="rug-indicator">
-                <span class="label">LP REMOVAL</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%"></div>
+    <div class="risk-content">
+        <div class="analysis-container">
+            <!-- Rugpull Risk Analysis -->
+            <div class="analysis-section danger-zone">
+                <div class="section-title">
+                    🚨 RUG DETECTION MATRIX
+                </div>
+                <div class="section-content">
+                    <div class="rug-metrics">
+                        <div class="rug-indicator">
+                            <span class="label">LP REMOVAL RISK</span>
+                            <div class="progress-bar">
+                                <div class="progress danger pulse" style="width: 75%"></div>
+                            </div>
+                            <span class="value">CRITICAL</span>
+                        </div>
+                        <div class="rug-indicator">
+                            <span class="label">SELL PRESSURE</span>
+                            <div class="progress-bar">
+                                <div class="progress warning" style="width: 45%"></div>
+                            </div>
+                            <span class="value">MODERATE</span>
+                        </div>
+                        <div class="rug-score matrix-box">
+                            <div class="matrix-header">RUG PROBABILITY</div>
+                            <div class="score danger">7.5/10</div>
+                            <div class="matrix-grid"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="rug-indicator">
-                <span class="label">SELL PRESSURE</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 45%"></div>
-                </div>
-            </div>
-            <div class="rug-score">
-                <span>RUG SCORE</span>
-                <div class="score">7.5/10</div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Alpha Signals -->
-    <div class="metric-panel">
-        <h3>🎯 ALPHA SIGNALS</h3>
-        <div class="signal-grid">
-            <div class="signal-item hot">
-                <span class="label">FOMO LEVEL</span>
-                <span class="value">EXTREME</span>
+            <!-- Alpha Signals -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    🎯 ALPHA DETECTION GRID
+                </div>
+                <div class="section-content">
+                    <div class="signal-grid">
+                        <div class="signal-item hot matrix-box">
+                            <div class="matrix-header">FOMO LEVEL</div>
+                            <span class="value pulse">EXTREME</span>
+                        </div>
+                        <div class="signal-item matrix-box">
+                            <div class="matrix-header">DEGEN SCORE</div>
+                            <span class="value">9.2/10</span>
+                        </div>
+                        <div class="signal-item warning matrix-box">
+                            <div class="matrix-header">NORMIE FEAR</div>
+                            <span class="value">HIGH</span>
+                        </div>
+                        <div class="signal-item success matrix-box">
+                            <div class="matrix-header">APE FACTOR</div>
+                            <span class="value pulse">FULL SEND</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="signal-item">
-                <span class="label">DEGEN SCORE</span>
-                <span class="value">9.2/10</span>
-            </div>
-            <div class="signal-item warning">
-                <span class="label">NORMIE FEAR</span>
-                <span class="value">HIGH</span>
-            </div>
-            <div class="signal-item success">
-                <span class="label">APE FACTOR</span>
-                <span class="value">FULL SEND</span>
-            </div>
-        </div>
-    </div>
 
-    <!-- Memetic Strength -->
-    <div class="metric-panel">
-        <h3>💎 MEMETIC POWER</h3>
-        <div class="meme-metrics">
-            <div class="meme-gauge">
-                <svg viewBox="0 0 100 50">
-                    <path d="M10,40 A40,40 0 0,1 90,40" fill="none" stroke="#1a1a1a" stroke-width="5"/>
-                    <path d="M10,40 A40,40 0 0,1 90,40" fill="none" stroke="#00ff00" stroke-width="5" stroke-dasharray="126" stroke-dashoffset="25"/>
-                </svg>
-                <div class="gauge-value">VIRAL</div>
-            </div>
-            <div class="meme-stats">
-                <div class="stat">
-                    <span>Telegram Spam</span>
-                    <span class="value">+420%</span>
+            <!-- Whale Psychology -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    🐋 WHALE NEURAL NETWORK
                 </div>
-                <div class="stat">
-                    <span>Twitter Bots</span>
-                    <span class="value">9000+</span>
+                <div class="section-content">
+                    <div class="whale-metrics matrix-box">
+                        <div class="brain-waves">
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                            <div class="wave"></div>
+                        </div>
+                        <div class="whale-mood pulse">ACCUMULATING</div>
+                        <div class="next-move warning">PUMP IMMINENT</div>
+                        <div class="matrix-grid"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Whale Psychology -->
-    <div class="metric-panel">
-        <h3>🐋 WHALE PSYCHOLOGY</h3>
-        <div class="whale-metrics">
-            <div class="brain-waves">
-                <div class="wave"></div>
-                <div class="wave"></div>
-                <div class="wave"></div>
+            <!-- Normie Liquidation -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    💀 LIQUIDATION MATRIX
+                </div>
+                <div class="section-content">
+                    <div class="rekt-metrics">
+                        <div class="liquidation-feed matrix-box">
+                            <div class="liquidation">
+                                <span class="wallet">0x7d..ff3</span>
+                                <span class="amount pulse">-$42.0K</span>
+                                <span class="time">2m ago</span>
+                            </div>
+                            <div class="liquidation">
+                                <span class="wallet">0x3a..b21</span>
+                                <span class="amount">-$69.4K</span>
+                                <span class="time">5m ago</span>
+                            </div>
+                            <div class="matrix-grid"></div>
+                        </div>
+                        <div class="rekt-stats">
+                            <div class="stat-box matrix-box">
+                                <div class="matrix-header">NGMI COUNT</div>
+                                <span class="value">1,337</span>
+                            </div>
+                            <div class="stat-box highlight matrix-box">
+                                <div class="matrix-header">COPE LEVEL</div>
+                                <span class="value pulse">MAXIMUM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="whale-mood">ACCUMULATING</div>
-            <div class="next-move">PUMP IMMINENT</div>
-        </div>
-    </div>
 
-    <!-- Normie Liquidation -->
-    <div class="metric-panel">
-        <h3>💀 NORMIE REKT METER</h3>
-        <div class="rekt-metrics">
-            <div class="liquidation-feed">
-                <div class="liquidation">
-                    <span class="wallet">0x7d..ff3</span>
-                    <span class="amount">-$42.0K</span>
-                    <span class="time">2m ago</span>
+            <!-- Portfolio Risk Analysis -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    📊 QUANTUM RISK MATRIX
                 </div>
-                <div class="liquidation">
-                    <span class="wallet">0x3a..b21</span>
-                    <span class="amount">-$69.4K</span>
-                    <span class="time">5m ago</span>
+                <div class="section-content">
+                    <div class="portfolio-metrics">
+                        <div class="risk-indicators">
+                            <div class="risk-indicator matrix-box">
+                                <span class="label">VALUE AT RISK (VaR)</span>
+                                <div class="risk-value danger pulse">-$25,420 (95% CI)</div>
+                            </div>
+                            <div class="risk-indicator matrix-box">
+                                <span class="label">SHARPE RATIO</span>
+                                <div class="risk-value warning">1.2</div>
+                            </div>
+                        </div>
+                        <div class="risk-distribution matrix-box">
+                            <div class="distribution-bar">
+                                <div class="bar-segment low" style="width: 30%"></div>
+                                <div class="bar-segment medium" style="width: 45%"></div>
+                                <div class="bar-segment high" style="width: 25%"></div>
+                            </div>
+                            <div class="distribution-labels">
+                                <span>Low Risk</span>
+                                <span>Medium</span>
+                                <span>High Risk</span>
+                            </div>
+                            <div class="matrix-grid"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="rekt-stats">
-                <div class="stat-box">
-                    <span>NGMI Count</span>
-                    <span class="value">1,337</span>
-                </div>
-                <div class="stat-box highlight">
-                    <span>Cope Level</span>
-                    <span class="value">MAXIMUM</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Degen Sentiment -->
-    <div class="metric-panel">
-        <h3>🎰 DEGEN HIVEMIND</h3>
-        <div class="hivemind-metrics">
-            <div class="sentiment-gauge">
-                <div class="needle" style="transform: rotate(120deg)"></div>
-                <div class="labels">
-                    <span>PAPER</span>
-                    <span>HODL</span>
-                    <span>APE</span>
+            <!-- Degen Sentiment -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    🎰 DEGEN QUANTUM STATE
+                </div>
+                <div class="section-content">
+                    <div class="hivemind-metrics matrix-box">
+                        <div class="sentiment-gauge">
+                            <div class="needle" style="transform: rotate(120deg)"></div>
+                            <div class="labels">
+                                <span>PAPER</span>
+                                <span>HODL</span>
+                                <span>APE</span>
+                            </div>
+                        </div>
+                        <div class="hivemind-stats">
+                            <div class="stat-row">
+                                <span>TELEGRAM COPE:</span>
+                                <span class="value pulse">OVERDOSE</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>DISCORD SPAM:</span>
+                                <span class="value">NUCLEAR</span>
+                            </div>
+                            <div class="stat-row highlight">
+                                <span>APE PROBABILITY:</span>
+                                <span class="value warning">99.9%</span>
+                            </div>
+                        </div>
+                        <div class="matrix-grid"></div>
+                    </div>
                 </div>
             </div>
-            <div class="hivemind-stats">
-                <div class="stat-row">
-                    <span>Telegram Cope:</span>
-                    <span class="value">OVERDOSE</span>
-                </div>
-                <div class="stat-row">
-                    <span>Discord Spam:</span>
-                    <span class="value">NUCLEAR</span>
-                </div>
-                <div class="stat-row highlight">
-                    <span>Ape Probability:</span>
-                    <span class="value">99.9%</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Portfolio Risk Analysis -->
-    <div class="metric-panel">
-        <h3>📊 PORTFOLIO RISK</h3>
-        <div class="portfolio-metrics">
-            <div class="risk-indicator">
-                <span class="label">VALUE AT RISK (VaR)</span>
-                <div class="risk-value danger">-$25,420 (95% CI)</div>
-            </div>
-            <div class="risk-indicator">
-                <span class="label">SHARPE RATIO</span>
-                <div class="risk-value warning">1.2</div>
-            </div>
-            <div class="risk-distribution">
-                <div class="distribution-bar">
-                    <div class="bar-segment low" style="width: 30%"></div>
-                    <div class="bar-segment medium" style="width: 45%"></div>
-                    <div class="bar-segment high" style="width: 25%"></div>
+            <!-- Market Risk Indicators -->
+            <div class="analysis-section">
+                <div class="section-title">
+                    🌊 MARKET NEURAL GRID
                 </div>
-                <div class="distribution-labels">
-                    <span>Low Risk</span>
-                    <span>Medium</span>
-                    <span>High Risk</span>
+                <div class="section-content">
+                    <div class="market-risk-grid">
+                        <div class="risk-box danger matrix-box">
+                            <div class="matrix-header">VOLATILITY INDEX</div>
+                            <span class="value pulse">32.5</span>
+                        </div>
+                        <div class="risk-box warning matrix-box">
+                            <div class="matrix-header">BETA</div>
+                            <span class="value">1.45</span>
+                        </div>
+                        <div class="risk-box matrix-box">
+                            <div class="matrix-header">DRAWDOWN</div>
+                            <span class="value">-15.3%</span>
+                        </div>
+                        <div class="risk-box success matrix-box">
+                            <div class="matrix-header">LIQUIDITY</div>
+                            <span class="value pulse">HIGH</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Market Risk Indicators -->
-    <div class="metric-panel">
-        <h3>🌊 MARKET RISK</h3>
-        <div class="market-risk-grid">
-            <div class="risk-box danger">
-                <span class="label">VOLATILITY INDEX</span>
-                <span class="value">32.5</span>
-            </div>
-            <div class="risk-box warning">
-                <span class="label">BETA</span>
-                <span class="value">1.45</span>
-            </div>
-            <div class="risk-box">
-                <span class="label">DRAWDOWN</span>
-                <span class="value">-15.3%</span>
-            </div>
-            <div class="risk-box success">
-                <span class="label">LIQUIDITY</span>
-                <span class="value">HIGH</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Volatility Analysis -->
-    <div class="metric-panel">
-        <h3>📈 VOLATILITY METRICS</h3>
-        <div class="volatility-metrics">
-            <div class="vol-gauge">
-                <svg viewBox="0 0 100 50">
-                    <path d="M10,40 A40,40 0 0,1 90,40" fill="none" stroke="#1a1a1a" stroke-width="5"/>
-                    <path d="M10,40 A40,40 0 0,1 90,40" fill="none" stroke="#ff3e00" stroke-width="5" stroke-dasharray="126" stroke-dashoffset="30"/>
-                </svg>
-                <div class="gauge-label">EXTREME</div>
-            </div>
-            <div class="vol-stats">
-                <div class="stat">
-                    <span>Historical Vol</span>
-                    <span class="value">45.2%</span>
-                </div>
-                <div class="stat">
-                    <span>Implied Vol</span>
-                    <span class="value">52.8%</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Risk-Adjusted Performance -->
-    <div class="metric-panel">
-        <h3>🎲 DEGEN SKILL METRICS</h3>
-        <div class="performance-metrics">
-            <div class="metric-row">
-                <span>NGMI Protection Score</span>
-                <span class="value">1.8x</span>
-            </div>
-            <div class="metric-row">
-                <span>Pump Timing Score</span>
-                <span class="value">420x</span>
-            </div>
-            <div class="metric-row">
-                <span>Alpha Chad Rating</span>
-                <span class="value">BASED</span>
-            </div>
-            <div class="risk-rating">
-                <span>DEGEN LEVEL</span>
-                <div class="rating-stars">
-                    <span class="star active">🚀</span>
-                    <span class="star active">🚀</span>
-                    <span class="star active">🚀</span>
-                    <span class="star">🚀</span>
-                    <span class="star">🚀</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Correlation Analysis -->
-    <div class="metric-panel">
-        <h3>🔄 CORRELATION MATRIX</h3>
-        <div class="correlation-metrics">
-            <div class="correlation-grid">
-                <div class="corr-cell high">BTC<br>1.00</div>
-                <div class="corr-cell medium">ETH<br>0.85</div>
-                <div class="corr-cell low">SOL<br>0.32</div>
-                <div class="corr-cell negative">GOLD<br>-0.15</div>
-            </div>
-            <div class="correlation-legend">
-                <span class="legend-item">High >0.7</span>
-                <span class="legend-item">Med >0.5</span>
-                <span class="legend-item">Low <0.5</span>
             </div>
         </div>
     </div>
@@ -272,14 +218,12 @@
 
 <style>
 .risk-management-container {
-    height: 44vh;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #00ff00 #000000;
+    height: 39.5vh;
     display: flex;
     flex-direction: column;
-    background: #000000;
-    padding: 3.5rem 0.75rem 1.5rem 0.75rem;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+    background: transparent;
 }
 
 .risk-management-container h2 {
@@ -299,154 +243,128 @@
     letter-spacing: 1px;
 }
 
-.risk-management-container::-webkit-scrollbar {
-    width: 6px;
+.risk-content {
+    position: absolute !important;
+    top: 3vh !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    overflow-y: auto !important;
+    padding: 0.5vh !important;
+    background: rgba(0, 5, 0, 0.2);
+    font-family: 'Courier New', monospace;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
 }
 
-.risk-management-container::-webkit-scrollbar-track {
-    background: #000000;
+.risk-content::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
 }
 
-.risk-management-container::-webkit-scrollbar-thumb {
-    background: #00ff00;
-    border-radius: 3px;
+.analysis-container {
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-gap: 0.2rem;
+    padding: 0.3vh;
+    background: rgba(0, 5, 0, 0.2);
 }
 
-.metric-panel {
-    background: #000000;
-    border: 1px solid #1b1f24;
-    border-radius: 0.25rem;
-    padding: 0.75rem;
-    margin-bottom: 0.75rem;
+.analysis-section {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+    border-radius: 0;
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
-.metric-panel h3 {
-    color: #00ff00;
-    font-size: 0.875rem;
-    margin: 0 0 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.metric-panel .danger-zone {
-    border: 1px solid #ff0000;
+.analysis-section.danger-zone {
+    border: 1px solid rgba(255, 0, 0, 0.3);
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
 }
 
-.metric-panel .rug-metrics {
-    display: grid;
-    gap: 0.5rem;
-}
-
-.metric-panel .rug-indicator {
+.section-title {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    align-items: center;
+    gap: 0.3rem;
+    color: #00ff00;
+    font-size: 1.24vh;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.metric-panel .progress-bar {
+.section-content {
+    padding: 0.2rem;
+}
+
+.matrix-box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 0, 0.1);
+    padding: 0.3rem;
+    overflow: hidden;
+}
+
+.matrix-grid {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(#00ff0011 1px, transparent 1px) 0 0 / 20px 20px,
+        linear-gradient(90deg, #00ff0011 1px, transparent 1px) 0 0 / 20px 20px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.matrix-header {
+    color: #8b949e;
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+
+.progress-bar {
     height: 4px;
     background: #1a1a1a;
     border-radius: 2px;
     overflow: hidden;
+    margin: 0.2rem 0;
 }
 
-.metric-panel .progress {
+.progress {
     height: 100%;
-    background: #ff0000;
     transition: width 0.3s ease;
 }
 
-.metric-panel .rug-score {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #ff0000;
-    font-weight: bold;
+.progress.danger {
+    background: linear-gradient(90deg, #ff0000, #ff3e00);
+}
+
+.progress.warning {
+    background: linear-gradient(90deg, #ffaa00, #ff7700);
 }
 
 .signal-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.35rem;
+    gap: 0.3rem;
 }
 
 .signal-item {
-    background: #000000;
-    padding: 0.35rem;
-    border-radius: 0.25rem;
-    border: 1px solid #1b1f24;
-}
-
-.signal-item .label {
-    color: #8b949e;
-    font-size: 0.75rem;
+    padding: 0.3rem;
+    text-align: center;
 }
 
 .signal-item .value {
-    color: #00ff00;
+    font-size: 0.9rem;
     font-weight: bold;
+    margin-top: 0.2rem;
 }
 
-.signal-item.hot .value {
-    color: #ff3e00;
-}
-
-.signal-item.warning .value {
-    color: #ffaa00;
-}
-
-.signal-item.success .value {
-    color: #00ff00;
-}
-
-.meme-metrics {
-    text-align: center;
-}
-
-.meme-gauge {
-    position: relative;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-}
-
-.meme-gauge svg {
-    width: 100%;
-    height: auto;
-}
-
-.gauge-value {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #00ff00;
-    font-weight: bold;
-}
-
-.meme-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.stat {
-    display: flex;
-    justify-content: space-between;
-    color: #8b949e;
-    font-size: 0.75rem;
-}
-
-.stat .value {
-    color: #00ff00;
-}
-
-.whale-metrics {
-    text-align: center;
-}
+.signal-item.hot .value { color: #ff3e00; }
+.signal-item.warning .value { color: #ffaa00; }
+.signal-item.success .value { color: #00ff00; }
 
 .brain-waves {
     height: 30px;
@@ -454,6 +372,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
+    margin: 0.5rem 0;
 }
 
 .wave {
@@ -463,117 +382,110 @@
     animation: wave 1.5s ease-in-out infinite;
 }
 
-.wave:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.wave:nth-child(3) {
-    animation-delay: 0.4s;
-}
+.wave:nth-child(2) { animation-delay: 0.2s; }
+.wave:nth-child(3) { animation-delay: 0.4s; }
 
 .whale-mood {
     color: #00ff00;
     font-weight: bold;
     margin: 0.5rem 0;
+    font-size: 0.9rem;
 }
 
 .next-move {
     color: #ffaa00;
-    font-size: 0.875rem;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
-    }
-}
-
-@keyframes wave {
-    0%, 100% {
-        height: 20%;
-    }
-    50% {
-        height: 100%;
-    }
-}
-
-.rekt-metrics {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    font-size: 0.8rem;
 }
 
 .liquidation-feed {
-    background: rgba(255, 0, 0, 0.05);
-    border-radius: 0.25rem;
-    padding: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .liquidation {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0.25rem 0;
+    padding: 0.3rem;
     border-bottom: 1px solid rgba(255, 0, 0, 0.2);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 1;
 }
 
 .liquidation:last-child {
     border-bottom: none;
 }
 
-.liquidation .wallet {
-    color: #ff3e00;
-}
-
-.liquidation .amount {
-    color: #ff0000;
-    font-weight: bold;
-}
-
-.liquidation .time {
-    color: #8b949e;
-}
+.liquidation .wallet { color: #ff3e00; }
+.liquidation .amount { color: #ff0000; font-weight: bold; }
+.liquidation .time { color: #8b949e; }
 
 .rekt-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 0.3rem;
 }
 
 .stat-box {
-    background: #000000;
-    padding: 0.35rem;
-    border-radius: 0.25rem;
     text-align: center;
-    font-size: 0.75rem;
+    padding: 0.3rem;
 }
 
 .stat-box .value {
     display: block;
     color: #ff3e00;
     font-weight: bold;
-    margin-top: 0.25rem;
+    margin-top: 0.2rem;
 }
 
-.hivemind-metrics {
+.risk-indicators {
+    display: grid;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.risk-indicator {
+    padding: 0.3rem;
+}
+
+.risk-value {
+    font-weight: bold;
+    margin-top: 0.2rem;
+}
+
+.risk-value.danger { color: #ff0000; }
+.risk-value.warning { color: #ffaa00; }
+
+.distribution-bar {
+    height: 6px;
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.bar-segment {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.bar-segment.low { background: #00ff00; }
+.bar-segment.medium { background: #ffaa00; }
+.bar-segment.high { background: #ff0000; }
+
+.distribution-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #8b949e;
 }
 
 .sentiment-gauge {
     position: relative;
     height: 50px;
-    background: #1a1a1a;
+    background: rgba(0, 255, 0, 0.1);
     border-radius: 25px 25px 0 0;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .needle {
@@ -594,24 +506,27 @@
     display: flex;
     justify-content: space-between;
     padding: 0.25rem 1rem;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: #8b949e;
 }
 
 .hivemind-stats {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.3rem;
 }
 
 .stat-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.75rem;
-    padding: 0.25rem;
-    background: #000000;
-    border-radius: 0.25rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid rgba(0, 255, 0, 0.1);
+}
+
+.stat-row:last-child {
+    border-bottom: none;
 }
 
 .stat-row .value {
@@ -619,232 +534,84 @@
     font-weight: bold;
 }
 
-.highlight {
-    animation: pulse-highlight 2s infinite;
-}
-
-@keyframes pulse-highlight {
-    0%, 100% {
-        background: #1a1a1a;
-    }
-    50% {
-        background: rgba(0, 255, 0, 0.1);
-    }
-}
-
-.portfolio-metrics {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.risk-indicator {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1a1a1a;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-}
-
-.risk-value {
-    font-weight: bold;
-}
-
-.risk-value.danger {
-    color: #ff0000;
-}
-
-.risk-value.warning {
+.stat-row .value.warning {
     color: #ffaa00;
-}
-
-.risk-distribution {
-    margin-top: 0.5rem;
-}
-
-.distribution-bar {
-    height: 8px;
-    display: flex;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.bar-segment {
-    height: 100%;
-}
-
-.bar-segment.low {
-    background: #00ff00;
-}
-
-.bar-segment.medium {
-    background: #ffaa00;
-}
-
-.bar-segment.high {
-    background: #ff0000;
-}
-
-.distribution-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.25rem;
-    font-size: 0.75rem;
-    color: #8b949e;
 }
 
 .market-risk-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.35rem;
+    gap: 0.3rem;
 }
 
 .risk-box {
-    background: #000000;
-    padding: 0.35rem;
-    border-radius: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.risk-box .label {
-    color: #8b949e;
-    font-size: 0.75rem;
+    padding: 0.3rem;
+    text-align: center;
 }
 
 .risk-box .value {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: bold;
-    color: #00ff00;
+    margin-top: 0.2rem;
 }
 
-.risk-box.danger .value {
-    color: #ff0000;
+.risk-box.danger .value { color: #ff0000; }
+.risk-box.warning .value { color: #ffaa00; }
+.risk-box.success .value { color: #00ff00; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
 
-.risk-box.warning .value {
-    color: #ffaa00;
+@keyframes wave {
+    0%, 100% { height: 20%; }
+    50% { height: 100%; }
 }
 
-.volatility-metrics {
-    text-align: center;
+.pulse {
+    animation: pulse 2s infinite;
 }
 
-.vol-gauge {
+@keyframes matrix-rain {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.highlight {
     position: relative;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
+    overflow: hidden;
 }
 
-.gauge-label {
-    color: #ff3e00;
-    font-weight: bold;
-    margin-top: 0.5rem;
+.highlight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(0, 255, 0, 0.1) 50%,
+        transparent 100%
+    );
+    animation: highlight-sweep 2s infinite;
 }
 
-.vol-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-}
-
-.performance-metrics {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.metric-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.35rem;
-    background: #000000;
-    border-radius: 0.25rem;
-}
-
-.metric-row .value {
-    color: #00ff00;
-    font-weight: bold;
-}
-
-.risk-rating {
-    margin-top: 0.5rem;
-    text-align: center;
-}
-
-.rating-stars {
-    color: #ffaa00;
-    font-size: 1.25rem;
-    margin-top: 0.25rem;
-}
-
-.star.active {
-    color: #ffaa00;
-}
-
-.star:not(.active) {
-    color: #1a1a1a;
-}
-
-.correlation-metrics {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.correlation-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.25rem;
-}
-
-.corr-cell {
-    padding: 0.5rem;
-    text-align: center;
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    background: #000000;
-    border: 1px solid #1b1f24;
-}
-
-.corr-cell.high {
-    background: rgba(0, 255, 0, 0.1);
-    color: #00ff00;
-}
-
-.corr-cell.medium {
-    background: rgba(255, 170, 0, 0.1);
-    color: #ffaa00;
-}
-
-.corr-cell.low {
-    background: rgba(255, 62, 0, 0.1);
-    color: #ff3e00;
-}
-
-.corr-cell.negative {
-    background: rgba(255, 0, 0, 0.1);
-    color: #ff0000;
-}
-
-.correlation-legend {
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.75rem;
-    color: #8b949e;
+@keyframes highlight-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 </style>
 
 <script>
-// Update the selector to be scoped to degen-metrics-card
+// Update needle position
 setInterval(() => {
-    const needle = document.querySelector('.degen-metrics-card .needle');
-    const rotation = Math.random() * 180;
-    needle.style.transform = `rotate(${rotation}deg)`;
+    const needle = document.querySelector('.risk-management-container .needle');
+    if (needle) {
+        const rotation = Math.random() * 180;
+        needle.style.transform = `rotate(${rotation}deg)`;
+    }
 }, 3000);
 </script>
